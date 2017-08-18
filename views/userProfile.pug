@@ -1,0 +1,12 @@
+extends index
+
+block content
+  h2= users.name
+  ul
+    li= users.dob
+    li= users.gender  
+  h3= 'Posts'
+    for post in posts
+      li
+        a(href='/posts/'+post.id)= post.content
+      

@@ -1,0 +1,22 @@
+doctype html
+html
+    block scripts
+    head
+      title PugSpress
+      block scripts
+    body
+      block apphead
+        h4 
+          a(href='/users/')='Users'
+        h4
+          a(href='/posts/')='Posts'
+      block content
+        h1='User List'
+        ul
+          for user in users 
+            li
+              a(href='/users/'+user.id)= user.name
+
+      block appfoot
+        #footer
+          p &copy; Eli Steiger
